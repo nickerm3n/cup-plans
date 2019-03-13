@@ -1,0 +1,187 @@
+@font-face {
+    font-family: misoregular;
+    src: url('../fonts/miso-webfont.woff2') format('woff2'),
+         url('../fonts/miso-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: misobold;
+    src: url('../fonts/fonts/miso-bol-webfont.woff2') format('woff2'),
+         url('../fonts/fonts/miso-bol-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+:root {
+
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+	transition: all .3s ease-in-out;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body, html {
+	min-height: 100%;
+	width: 100%;
+}
+
+html {
+	height: 100%;
+}
+
+.clear::after, .clear::before {
+	content: " ";
+	display: table;
+}
+
+.clear::after {
+	clear: both;
+}
+
+/* Main Styles */
+
+
+body {
+	font-family: misoregular, sans-serif;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 26px;
+	background: #fdde7e;
+	display: flex;
+	align-items: center;
+}
+
+.container {
+	max-width: 1150px;
+	width: 100%;
+	padding: 0 10px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.coffee-card__cups--cup:hover {
+	transform-origin: 50% 100%;
+	animation: vacillation 2s  ease-in-out;
+}
+
+
+.coffee-card {
+	width: 31.5%;
+	background: #FFF;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 40px 10px;
+	border-radius: 5px;
+}
+
+
+.coffee-card--main {
+	padding: 50px 10px;
+}
+
+
+.coffee-card__cost {
+	padding-bottom: 22px;
+	font-size: 70px;
+	font-family: misoregular, sans-serif;
+	font-weight: 700;
+	line-height: .9;
+	color: #02995b;
+}
+
+.coffee-card__cost--main {
+	padding-bottom: 50px;
+}
+
+.coffee-card__cups {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.coffee-card:hover {
+	box-shadow: inset 0 0 10px 1px rgba(177, 172, 166, 1)
+}
+
+.coffee-card__cups--main {
+	
+}
+
+.coffee-card__cups--smoke {
+	padding-bottom: 11px;
+	animation: smoke-out 3.5s infinite ease-in-out;
+}
+
+.coffee-card__cups--cup {
+	padding-bottom: 37px;
+	transform-origin: 50% 100%;
+	padding-left: 10px;
+/* 	transform: translateX(5%); */
+}
+
+.coffee-card__title {
+	padding-bottom: 40px;
+}
+
+.coffee-card__title {
+	font-size: 56px;
+}
+
+.coffee-card__desc {
+	width: 43%;
+	font-size: 20px;
+	text-align: center;
+}
+
+@keyframes vacillation {
+	0% {transform: rotate(0deg);
+	}
+
+	15% {transform: rotate(2deg)}
+	
+	30% {transform: rotate(-4deg)}
+	
+	50% {transform: rotate(3deg)}
+
+	70% {transform: rotate(-3deg)}
+	
+	85% {transform: rotate(1deg)}
+	
+	100% {
+		transform: rotate(0);
+		}
+}
+
+@keyframes smoke-out {
+	0% {
+		opacity: .3;
+	}
+	35% {opacity: 1}
+
+	75% {
+		opacity: .5;
+	}
+	100% {
+		transform: translateY(-10px);
+		opacity: 0;
+	}
+} 
