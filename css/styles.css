@@ -63,14 +63,14 @@ body {
 	line-height: 26px;
 	background: #fdde7e;
 	display: flex;
-	align-items: center;
+	flex-direction: column;
 }
 
 .container {
 	max-width: 1150px;
 	width: 100%;
 	padding: 0 10px;
-	margin: 0 auto;
+	margin: 80px auto 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
